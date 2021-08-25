@@ -11,7 +11,11 @@ For the current implementation, we consider the task to be learned successfully 
 
 ## Learning algorithm
 
-The solution implemented is Deep Q-Learning (DQN) algorithm.
+The solution implemented is Deep Q-Learning (DQN) algorithm. 
+The algorithm enhances the classic RL `Q-Learning` algorithm with the Deep Neural Networks and a technique called `Experience Replay`.
+The neural network tries to learn the underlying representation for `Q-function` to predict action values. The `Experience Replay` accumulates (buffers) the steps taken (experience collected) by the agent 
+and then tries to learn from a sampled batch in the buffer rather than trying to update after every step. This helps us avoid uncorrelated transitions in a batch and moreover allows more efficient use/re-use of the data.
+
 
 
 ### Model architecture
